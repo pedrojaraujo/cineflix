@@ -1,8 +1,19 @@
 .container__main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: #000000;
   width: 100%;
   height: 49rem;
   position: relative;
+ 
+}
+
+.container__main h1 {
+  color: white;
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
 .container__main::before {
@@ -15,4 +26,28 @@
   top: 0;
   left: 0;
   opacity: 0.1;
+}
+
+.grid__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.card__movie {
+  width: 300px;
+  height: 200px;
+  overflow: hidden;
+}
+
+.img__movie {
+  width: 100%;
+  height: 100%;
+  transform: scale(1);
+}
+
+.card__movie:hover {
+  transition: transform 0.5s;
+  transform: scale(1.1);
 }
